@@ -15,13 +15,15 @@ burger.addEventListener("click", () => {
   }
 });
 
+const activeClass = ["border-primary", "text-gray-700", "font-bold"];
+
 home.addEventListener("click", () => {
   if (currentMenu === "home") {
     return;
   }
-  home.classList.add("border-primary");
-  about.classList.remove("border-primary");
-  contact.classList.remove("border-primary");
+  home.classList.add(...activeClass);
+  about.classList.remove(...activeClass);
+  contact.classList.remove(...activeClass);
   currentMenu = "home";
 });
 
@@ -29,9 +31,9 @@ about.addEventListener("click", () => {
   if (currentMenu === "about") {
     return;
   }
-  about.classList.add("border-primary");
-  home.classList.remove("border-primary");
-  contact.classList.remove("border-primary");
+  about.classList.add(...activeClass);
+  home.classList.remove(...activeClass);
+  contact.classList.remove(...activeClass);
   currentMenu = "about";
 });
 
@@ -39,8 +41,8 @@ contact.addEventListener("click", () => {
   if (currentMenu === "contact") {
     return;
   }
-  contact.classList.add("border-primary");
-  home.classList.remove("border-primary");
-  about.classList.remove("border-primary");
+  contact.classList.add(...activeClass);
+  home.classList.remove(...activeClass);
+  about.classList.remove(...activeClass);
   currentMenu = "contact";
 });
